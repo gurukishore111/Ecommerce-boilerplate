@@ -1,9 +1,33 @@
-function App() {
+import React from 'react'
+import Homescreen from './screens/Homescreen'
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Header from './components/Header';
+import Product from './screens/Product';
+
+
+const App = () => {
   return (
     <div>
-      <h1>Let's Go</h1>
+      <Header/>
+    <Routes>
+     
+        
+
+     <Route path="/" element={<Homescreen/>}/>
+     <Route path="/product/:id" element={<Product/>} />
+    
+
+
+     
+
+   </Routes>
+ 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
