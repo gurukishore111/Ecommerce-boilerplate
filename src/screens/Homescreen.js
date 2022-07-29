@@ -1,7 +1,8 @@
 import React from 'react'
-import axios from 'axios'
-import { useState,useEffect } from 'react'
 
+import { useEffect } from 'react'
+import { useDispatch,useSelector } from 'react-redux'
+import {listProducts} from '../actions/productActions'
 
 import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
@@ -9,19 +10,31 @@ import Rating from '../components/Rating'
 
 
 const Homescreen = () => {
-    const [products,setProducts]=useState([])
-    useEffect(()=>{
-        const fetchProducts=async()=>{
-            const {data}=await axios.get('/products')
-            setProducts(data)
+    // const [products,setProducts]=useState([])
+    const dispatch=useDispatch()
+    const productList=useSelector(state=>state.productList)
 
-        }
-        fetchProducts()
-    },[])
+    const{loading,error,products}=productList
+    useEffect(()=>{
+        // const fetchProducts=async()=>{
+        //     const {data}=await axios.get('/products')
+        //     setProducts(data)
+
+        // }
+        // fetchProducts()
+        dispatch(listProducts())
+    },[dispatch])
+ 
     return (
+
         <div className="homescreen">
-            
-           <div className="prodcontainer">
+            {loading?(
+                <h2>Loading...</h2>
+            ):error?(
+                <h3>{error}</h3>
+
+            ):(
+<div className="prodcontainer">
                 {products.map(product=>(
                      <div key={product.id} className="prod">
                       <div className="cardproduct">
@@ -44,6 +57,9 @@ const Homescreen = () => {
                      </div>
                 ))}
                 </div>
+            )
+            }
+           
                
            
         </div>
