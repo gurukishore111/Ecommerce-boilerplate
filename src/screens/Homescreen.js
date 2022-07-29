@@ -2,8 +2,10 @@ import React from 'react'
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 
+
 import { Link } from 'react-router-dom'
 import Rating from '../components/Rating'
+
 
 
 const Homescreen = () => {
@@ -37,6 +39,7 @@ const Homescreen = () => {
                          </div>
                          <div id="textprod">Rs.{product.amount}</div>
                          </Link>
+                         <button className="favbutton" >Add to Fav</button>
                         </div>
                      </div>
                 ))}
@@ -46,5 +49,7 @@ const Homescreen = () => {
         </div>
     )
 }
+
+
 
 export default Homescreen

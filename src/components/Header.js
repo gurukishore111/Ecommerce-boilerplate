@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import { FaUserAlt,FaShoppingCart } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../app.css"
+import {AiFillHeart} from 'react-icons/ai';
 
 import { Link } from 'react-router-dom';
 
@@ -20,6 +21,9 @@ const Header = () => {
   <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto navitem" id="navrightitems">
         <div className="cartnavitem">
+        <Link to="/fav" className="navrightitems">
+     <AiFillHeart className="carticon"/>Favourate
+      </Link>
       <Link to="/cart" className="navrightitems">
      <FaShoppingCart className="carticon"/>Cart
       </Link>

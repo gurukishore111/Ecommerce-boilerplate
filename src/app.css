@@ -184,3 +184,11 @@
   #prodbuttonhide{
     background-color: gray;
   }
+  .favbutton{
+    border: black 1px solid;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px;
+    font-size: 1.3rem;
+
+  }
