@@ -1,43 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kryto</title>
+	<style type="text/css">
+		
+		ul li{
+	list-style: none;
+	float:left;
+	width: 14%;
+	padding-left: 50px;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+		
+		#one
+		{
+			height: 90px;
+			background-color: blue;
+		}
+		#two
+		{
+			background-color: wheat;
+			height: auto;
+			margin-top: 20px;
+		}
+		#nav
+		{
+			width: 50%;
+			padding-left: 50px;
+			padding-bottom: 20px;
+		}
+		#three
+		{
+			width: 50%;
+			padding-bottom: 20px;
+			padding-left: 700px;
+		}
+		#login
+		{
+			background-color: white;
+			border: black;
+			margin: 100px 300px;
+			height: 200px;
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<div id="one" style="background-color: blue;">
+		<div id="nav" ><h1 style="float: left;">ShopKart</h1></div>
+		<div id="three" >
+		<ul>
+			<li><a href="#">
+				Products</a>
+			</li>
+			<li><a href="#">
+				Login</a>
+			</li>
+			<li><a href="#">
+				<img src="https://img.freepik.com/free-vector/realistic-supermarket-trolley-full-items_1284-35992.jpg" height="50px" width="50px"></a>
+			</li>
+		</ul>
+</div>
+	</div>
+	<div id="two" style="padding: 100px;">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<center>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<div id="login">
+	<h1>LOGIN</h1><form>
+	<table>
+		<tr>
+			
+			<td><input style="border-radius: 12px; height: 20px;"  type="text" id="uname" name="" placeholder="Email address"></td>
+		</tr>
+<tr>
+	
+	<td><input style="border-radius: 12px; height: 20px" type="text" id="lname" name="" placeholder="Password"></td>
+</tr>
+			</table>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+</form>
+<!-- here we assign sd the function -->
+<p style="color: blue;float: left;padding-left: 10px;">New user? Create on account</p> <button style="background-color: blue;color: white; border-radius: 12px; height: 40px; width: 70px;"><a href="home.html"></a>login</button>
+</center>
+</div>
+</div>
+</div>
+
+</body>
 </html>
