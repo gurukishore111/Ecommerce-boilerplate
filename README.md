@@ -70,7 +70,7 @@ API can be launched using npm run server.
 | /orders | Lists all available orders  
 | /favourites | Lists all available favourites
 
-More info about API usage can be found at the [Postman Collection](https://www.getpostman.com/collections/9f28d57ae334429e1f1f)
+Refer - [JSON sever](https://www.npmjs.com/package/json-server) docs for more information
 
 ## Bonus
 
